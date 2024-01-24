@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Manage Loans </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let loan of pendingLoans">
+      <ion-card-header>
+        <ion-card-title class="card-title-flex">
+          <ion-icon name="person-circle" size="large"></ion-icon>
+          {{ loan.id }}
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let item of loan?.details">
+            <ion-label
+              >{{ stringifyItemId(item.id) }} x {{ item.quantity }}</ion-label
+            >
+          </ion-item>
+        </ion-list>
+        <div class="action-buttons">
+          <ion-button
+            color="success"
+            expand="block"
+            (click)="updateLoanState(loan.tokenId, loan.id, 'approved')"
+            >Approve</ion-button
+          >
+          <ion-button
+            color="danger"
+            expand="block"
+            (click)="updateLoanState(loan.tokenId, loan.id, 'rejected')"
+            >Reject</ion-button
+          >
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

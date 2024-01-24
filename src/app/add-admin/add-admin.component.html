@@ -1,0 +1,40 @@
+<div class="popup-content">
+    <div class="popup-layout">
+        <div *ngIf="!this.loading">
+            <h3 class="popup-header">Want to partner up with superman</h3>
+            <p class="popup-message">Lets get you started!</p>
+        </div>
+
+        <div *ngIf="this.loading">
+            <h3 class="popup-header">Please wait for the access card to arrive</h3>
+            <p class="popup-message">This might take a while, you could just not be so cheap and actually speed up your
+                transaction {{":/"}}, also, buy a bottle on y-28.com</p>
+        </div>
+
+        <div *ngIf="this.loading" class="popup-loader">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-loader-2">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+            </svg>
+        </div>
+
+
+        <ion-content class="ion-text-center" *ngIf="!this.loading">
+            <img src="../../assets/img/background.png" class="background-image" />
+
+            <form [formGroup]="addressForm">
+                <ion-item>
+                    <ion-label>Wallet address</ion-label>
+                    <ion-input type="text" formControlName="address"></ion-input>
+                </ion-item>
+
+                <ion-button expand="block" type="submit" (click)="submit()">
+                    Login
+                </ion-button>
+            </form>
+
+            <!-- <ion-label color="danger"> <p>{{loginError}}</p> </ion-label> -->
+        </ion-content>
+    </div>
+</div>

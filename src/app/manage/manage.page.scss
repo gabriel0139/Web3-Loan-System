@@ -1,0 +1,79 @@
+ion-card {
+  margin-bottom: 10px; // Add space between cards
+
+  ion-card-header {
+    background: #f4f4f4; // Light gray background for card header
+  }
+
+  ion-card-content {
+    ion-list {
+      padding-bottom: 0; // Remove padding at the bottom of the list
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px; // Add some space above the buttons
+
+      ion-button {
+        flex-grow: 1; // Buttons take up equal space
+        margin: 0 5px; // Add some margin between buttons
+      }
+    }
+  }
+
+  .card-title-flex {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.log-out-icon {
+  size: large;
+}
+
+.popup-container {
+  position: absolute;
+  top: 0%;
+  z-index: 10;
+  left: 0%;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.popup-display {
+  width: 30rem;
+  display: flex;
+  row-gap: 0.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  height: 14rem;
+  max-width: 80%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.popup-content {
+  margin: 1rem;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+.popup-header {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.popup-message {
+  margin: 0.5rem;
+  color: rgba(0, 0, 0, 0.5);
+}

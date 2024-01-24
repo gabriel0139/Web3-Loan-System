@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PocketStore</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <img src="../../assets/img/background.png" class="background-image" />
+    <ion-button expand="block" type="submit" (click)="login()">
+      Connect wallet
+    </ion-button>
+
+    <ion-button expand="block" (click)="deploy()">
+      Deploy
+    </ion-button>
+
+  <ion-label color="danger">
+    <p>{{loginError}}</p>
+  </ion-label>
+</ion-content>

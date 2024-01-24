@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> New Loan </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button fill="clear" expand="block" [routerLink]="['/add-items']"
+    >Add Items</ion-button
+  >
+
+  <ion-label *ngFor="let item of items">
+    <h2 *ngIf="item.quantity > 0">{{item.name}} x {{item.quantity}}</h2>
+  </ion-label>
+
+  <ion-button expand="block" (click)="submit()">Submit</ion-button>
+</ion-content>

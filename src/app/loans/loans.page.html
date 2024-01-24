@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> My Loans </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div *ngIf="this.loans?.length == 0" style="display: flex; width: 100%;">
+  <div style="display: flex; flex-direction: column; margin: 12rem auto; ">
+
+    <p style="text-align: center;">
+      It looks kinda empty in here, please request a new loan to make this page so beautiful that even the black roses
+      will turn white
+    </p>
+    <ion-button (click)="newLoanClicked()">
+      Request a new loan
+    </ion-button>
+  </div>
+</div>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let loan of loans" [routerLink]="['/detail', loan.id]">
+      <ion-icon [name]="getStatusIcon(loan.state)" [color]="getStatusColor(loan.state)" class="status-icon">
+      </ion-icon>
+      <ion-label>
+        <p>Address: {{currentUser}}</p>
+        <h3>Due Date: {{loan.deadline.toString() | date:'d MMM yyyy'}}</h3>
+        <h3>Loan Items: {{loan.details.length}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
