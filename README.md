@@ -31,31 +31,33 @@ Step 3: Get GoerliETH on 'https://goerli-faucet.pk910.de/' (add money to both ac
 
 Step 4: Run 'npm i' or manually install the necessary packages
 
-Step 5: Run Ionic Serve
+Step 5: Add this line to your package.json, below "start" under "scripts": ```"compile": "npx ts-node --project tsconfig.json src/scripts/compile.ts && copyfiles --flat src/contracts/abi/*.json src/web3/abi",```
 
-Step 6: Deploy the Smart Contract using the 'Deploy' button (Open up the 'Inspect Element' - 'Console')
+Step 6: Run Ionic Serve
 
-Step 7: Copy the contract address you see in the console (Looks like 'Deployed to 0x78...2D385)
+Step 7: Deploy the Smart Contract using the 'Deploy' button (Open up the 'Inspect Element' - 'Console')
 
-Step 8: Paste that contract address inside const.ts, inside the variable 'CONTRACT_ADDRESS' (src\web3\const.ts)
+Step 8: Copy the contract address you see in the console (Looks like 'Deployed to 0x78...2D385)
 
-Step 9: Click the 'Connect Wallet' to login using the Admin Account - You should be logged in after this
+Step 9: Paste that contract address inside const.ts, inside the variable 'CONTRACT_ADDRESS' (src\web3\const.ts)
 
-Step 10: Disconnect via Metamask to fully logout ('https://www.youtube.com/watch?v=RL7LV5Tlc5c', you can also click the 'Globe' icon to remove the connection to the current site - src\assets\readme\disconnectWallet.png)
+Step 10: Click the 'Connect Wallet' to login using the Admin Account - You should be logged in after this
+
+Step 11: Disconnect via Metamask to fully logout (```https://www.youtube.com/watch?v=RL7LV5Tlc5c```, you can also click the 'Globe' icon to remove the connection to the current site - ```src\assets\readme\disconnectWallet.png```)
 
 # RUNNING THE FILE - USER
 
-Step 11: Login using the User account (Admin must be registered first before this)
+Step 12: Login using the User account (Admin must be registered first before this)
 
-Step 12: Click 'Get Access' when a pop up is shown
+Step 13: Click 'Get Access' when a pop up is shown
 
-Step 13: You should be logged in now
+Step 14: You should be logged in now
 
 
 # VIEWING THE NFT INSIDE THE WALLET
-If you want to view the NFT (Access Card) that you have minted, simply open up your Metamask, and under 'NFTs', scroll down and click 'Import NFT' (src\assets\readme\importNFT.png). 
+If you want to view the NFT (Access Card) that you have minted, simply open up your Metamask, and under 'NFTs', scroll down and click 'Import NFT' ```(src\assets\readme\importNFT.png)```. 
 
-To add your NFT, simply key in the Contract Address that is inside the const.ts, with the ID of 1 (Admin account), and 2 (User account) - (src\assets\readme\nftImported.png).
+To add your NFT, simply key in the Contract Address that is inside the const.ts, with the ID of 1 (Admin account), and 2 (User account) - ```(src\assets\readme\nftImported.png)```.
 
 ### DISCLAIMER 1: User account's NFTs are ids 2 and above if you have created more than 1 User account. Each deployment of smart contract results in 1 Admin account, which is representative of the first NFT (Access Card) that is created.
 
