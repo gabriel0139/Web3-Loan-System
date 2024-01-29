@@ -61,3 +61,7 @@ To add your NFT, simply key in the Contract Address that is inside the const.ts,
 
 ### DISCLAIMER 2: IF FOR SOME REASON THE CODE PREVENTS YOU FROM LOGGING IN, SIMPLY REFRESH THE PAGE AS THIS IS DUE TO SOME TECHNICAL DIFFICULTIES WHEN CHANGING ACCOUNTS AND/OR DISCONNECTING ACCOUNTS
 
+## Contact
+Email: gabrieljohn.liew@gmail.com
+
+Github: https://github.com/gabriel0139/Web3-Loan-System.git
