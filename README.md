@@ -58,4 +58,10 @@ If you want to view the NFT (Access Card) that you have minted, simply open up y
 To add your NFT, simply key in the Contract Address that is inside the const.ts, with the ID of 1 (Admin account), and 2 (User account) - (src\assets\readme\nftImported.png).
 
 ### DISCLAIMER 1: User account's NFTs are ids 2 and above if you have created more than 1 User account. Each deployment of smart contract results in 1 Admin account, which is representative of the first NFT (Access Card) that is created.
+
 ### DISCLAIMER 2: IF FOR SOME REASON THE CODE PREVENTS YOU FROM LOGGING IN, SIMPLY REFRESH THE PAGE AS THIS IS DUE TO SOME TECHNICAL DIFFICULTIES WHEN CHANGING ACCOUNTS AND/OR DISCONNECTING ACCOUNTS
+
+## Contact
+Email: gabrieljohn.liew@gmail.com
+
+Github: https://github.com/gabriel0139/Web3-Loan-System.git
