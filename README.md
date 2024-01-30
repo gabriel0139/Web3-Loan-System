@@ -27,31 +27,33 @@ Step 2: Make 2 accounts with Metamask (src\assets\readme\addAccountMM.png)
 
 Step 3: Get GoerliETH on 'https://goerli-faucet.pk910.de/' (add money to both accounts)
 
+Step 4: Add 'Sign in Anonymously' to Firebase's Authentication
+
 # RUNNING THE FILE - ADMIN
 
-Step 4: Run 'npm i' or manually install the necessary packages
+Step 5: Run 'npm i' or manually install the necessary packages
 
-Step 5: Add this line to your package.json, below "start" under "scripts": ```"compile": "npx ts-node --project tsconfig.json src/scripts/compile.ts && copyfiles --flat src/contracts/abi/*.json src/web3/abi",```
+Step 6: Add this line to your package.json, below "start" under "scripts": ```"compile": "npx ts-node --project tsconfig.json src/scripts/compile.ts && copyfiles --flat src/contracts/abi/*.json src/web3/abi",```
 
-Step 6: Run Ionic Serve
+Step 7: Run Ionic Serve
 
-Step 7: Deploy the Smart Contract using the 'Deploy' button (Open up the 'Inspect Element' - 'Console')
+Step 8: Deploy the Smart Contract using the 'Deploy' button (Open up the 'Inspect Element' - 'Console')
 
-Step 8: Copy the contract address you see in the console (Looks like 'Deployed to 0x78...2D385)
+Step 9: Copy the contract address you see in the console (Looks like 'Deployed to 0x78...2D385)
 
-Step 9: Paste that contract address inside const.ts, inside the variable 'CONTRACT_ADDRESS' (src\web3\const.ts)
+Step 10: Paste that contract address inside const.ts, inside the variable 'CONTRACT_ADDRESS' (src\web3\const.ts)
 
-Step 10: Click the 'Connect Wallet' to login using the Admin Account - You should be logged in after this
+Step 11: Click the 'Connect Wallet' to login using the Admin Account - You should be logged in after this
 
-Step 11: Disconnect via Metamask to fully logout (```https://www.youtube.com/watch?v=RL7LV5Tlc5c```, you can also click the 'Globe' icon to remove the connection to the current site - ```src\assets\readme\disconnectWallet.png```)
+Step 12: Disconnect via Metamask to fully logout (```https://www.youtube.com/watch?v=RL7LV5Tlc5c```, you can also click the 'Globe' icon to remove the connection to the current site - ```src\assets\readme\disconnectWallet.png```)
 
 # RUNNING THE FILE - USER
 
-Step 12: Login using the User account (Admin must be registered first before this)
+Step 13: Login using the User account (Admin must be registered first before this)
 
-Step 13: Click 'Get Access' when a pop up is shown
+Step 14: Click 'Get Access' when a pop up is shown
 
-Step 14: You should be logged in now
+Step 15: You should be logged in now
 
 
 # VIEWING THE NFT INSIDE THE WALLET
