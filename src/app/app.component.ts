@@ -12,12 +12,12 @@ export class AppComponent implements DoCheck {
   constructor() {
     // Your web app's Firebase configuration
     var firebaseConfig = {
-      apiKey: 'AIzaSyCuBvQ8j87macL1CKNhxqm69wpuoR2ZQVc',
-      authDomain: 'assignment-1a4f6.firebaseapp.com',
-      projectId: 'assignment-1a4f6',
-      storageBucket: 'assignment-1a4f6.appspot.com',
-      messagingSenderId: '103833588472',
-      appId: '1:103833588472:web:0f02a7e4a1833f31eb610d',
+      apiKey: '<API_KEY>',
+      authDomain: '',
+      projectId: '',
+      storageBucket: '',
+      messagingSenderId: '',
+      appId: '',
     };
 
     // Initialize Firebase
